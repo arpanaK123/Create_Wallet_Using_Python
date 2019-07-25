@@ -1,0 +1,22 @@
+syntax = "proto3";
+package CMD;
+
+message enrollUser {
+   uint64 clientID=1;
+   // map <string,sting> policy=2; // Policy definitions
+   string firstName=2;
+   string lastName=3;
+   string address=4;
+   string dateOfBirth=5;
+   string password=6;
+   string policy=7;
+   string emailID=8;
+   string securityQuestion=9;
+   string securityAnswer=10;
+   string timestamp=11;
+   bool auth=12;
+}
+
+message deleteUser {
+    uint64 clientID=1;
+}

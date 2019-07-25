@@ -1,0 +1,16 @@
+syntax="proto3";
+package CMD;
+
+
+message txnParam {
+    uint64 priority=1;
+}
+
+message txnData {
+    uint64 clientID=1;
+    uint64 transactionID=2;
+    uint64 sessionID=3;
+    float amount=4;
+    uint64 receiverID=5;
+    string timestamp=6;
+}

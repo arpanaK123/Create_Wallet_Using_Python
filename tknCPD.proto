@@ -1,0 +1,62 @@
+syntax = "proto3";
+package CMD;
+
+message createToken {
+    string tokenName=1;
+    string symbol=2;
+    float value=3;
+    float supply=4; 
+    string timestamp=5;
+}
+
+message grantToken {
+    string tokenName=1;
+    float supply=2;
+    string timestamp=3;
+}
+
+message modifyClientToken {
+    uint64 clientID=1;
+    string tokenName=2;
+    float amount=3;
+    string timestamp=4;
+    uint64 transactionID=5;
+}
+
+message checkBalance {
+    uint64 clientID=1;
+    string tokenName=2;
+}
+
+message checkAllowance {
+    uint64 clientID=1;
+    string tokenName=2;
+    float amount=3;
+}
+
+message makeRequest {
+    uint64 clientID=1;
+    string tokenName=2;
+    float amount=3;
+    // Transaction ID has to be generated
+    string timestamp=4;
+    uint64 requestID=5;
+    uint64 sessionID=6;
+}
+
+message approveRequest {
+    uint64 requestID=1;
+    bool approveStatus=2;
+    string tokenName=3;
+    string timestamp=4;
+    uint64 transactionID=5;
+    uint64 sessionID=6;
+}
+
+message transfer {
+    uint64 clientID=1;
+    string tokenName=2;
+    float amount=3;
+    string timestamp=4;
+    uint64 transactionID=5;
+}

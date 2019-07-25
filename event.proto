@@ -1,0 +1,12 @@
+syntax="proto3";
+package CMD;
+
+message evntParam{
+    uint64 priority=1;
+}
+
+message evntData {
+    uint64 classID=1;
+    uint64 evnetID=2;
+    string timestamp=3;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package CMD;
+
+message addSmartContract {
+   string contractName=1;
+   string contractFileName=2;
+   string fileType=3;
+   string fileMap=4; // Check the data type of the file Map again
+   string fileContent=5;
+   string accessControl=6;
+   string timestamp=7;
+}
+
+message readSmartContract {
+    string contractName=1;
+}

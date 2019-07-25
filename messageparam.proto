@@ -1,0 +1,10 @@
+syntax="proto3";
+package CMD;
+
+message messageParams {
+     uint64 clientID=1;
+     uint64 transactionID=2;
+     uint64 sessionID=3;
+     string status=4;
+     uint32 priority=5;
+}

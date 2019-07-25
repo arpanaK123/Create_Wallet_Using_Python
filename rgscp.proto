@@ -1,0 +1,13 @@
+syntax="proto3";
+package CMD;
+
+message rgscpParams {
+    uint64 clientID=1;
+    uint32 scpType=2;
+    string signature=3;
+}
+
+message rgscpData {
+    bytes scpFile=1;
+    bytes scpMap=2;
+}

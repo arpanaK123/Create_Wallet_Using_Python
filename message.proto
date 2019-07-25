@@ -1,0 +1,9 @@
+syntax="proto3";
+package CMD;
+
+message CPD {
+    bytes command=1;
+    bytes params=2;
+    bytes data=3;
+}
+
